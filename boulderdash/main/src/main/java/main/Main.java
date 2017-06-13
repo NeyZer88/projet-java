@@ -31,5 +31,3 @@ public abstract class Main {
     }
 
 }
-//re test on va encore essayer//
-// j'aime ta maman //
