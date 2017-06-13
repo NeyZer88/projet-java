@@ -31,4 +31,4 @@ public abstract class Main {
     }
 
 }
-// c bien le gamin//
+// c bien le gamin// va bien te faire enculer le java NEGRO !
