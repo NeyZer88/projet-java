@@ -31,5 +31,3 @@ public abstract class Main {
     }
 
 }
-//vasy cedric//
-//Hasta luego// 
