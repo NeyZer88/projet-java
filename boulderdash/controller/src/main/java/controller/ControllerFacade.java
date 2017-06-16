@@ -1,18 +1,12 @@
 package controller;
 
-import java.sql.SQLException;
+import java.sql.SQLException; 
 import java.util.List;
 
 import model.Example;
 import model.IModel;
 import view.IView;
 
-/**
- * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
- *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
- */
 public class ControllerFacade implements IController {
 
     /** The view. */
@@ -72,5 +66,12 @@ public class ControllerFacade implements IController {
      */
     public IModel getModel() {
         return this.model;
+
     }
+
+    public void setViewSystem(IViewSystem viewSystem)
+    {
+    	
+    }
+    
 }
