@@ -1,5 +1,6 @@
 package controller;
 
+
 public class UserOrder implements IUserOrder {
 	
 	private int player;
@@ -11,13 +12,13 @@ public class UserOrder implements IUserOrder {
 		
 	}
 	
-	Order getOrder(Order order)
+	public Order getOrder(Order order)
 	{
 		return order;
 		
 	}
 	
-	int getPlayer(int player){
+	public int getPlayer(int player){
 		
 		return player;
 		

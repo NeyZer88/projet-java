@@ -11,6 +11,7 @@ public class ViewFacade implements IView {
     /**
      * Instantiates a new view facade.
      */
+	
     public ViewFacade() {
         super();
     }
@@ -20,7 +21,7 @@ public class ViewFacade implements IView {
      */
     @Override
     public final void displayMessage(final String message) {
-        JOptionPane.showMessageDialog(null, message);
+        JOptionPane.showMessageDialog(this, "message\n attention", "boulderdash", JOptionPane.WARNING_MESSAGE);
     }
     
     public void displayMaps(String map){

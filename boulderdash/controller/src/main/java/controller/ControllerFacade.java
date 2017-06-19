@@ -2,20 +2,24 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import model.Example;
 import model.IModel;
 import view.IView;
 import view.IViewSystem;
+/*<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https://github.com/NeyZer88/projet-java.git*/
 
 
-public class ControllerFacade implements IController {
+public class ControllerFacade implements IOrderPerformer {
 
     /** The view. */
     private final IView  view;
 
     /** The model. */
     private final IModel model;
+    
 
     /**
      * Instantiates a new controller facade.
@@ -25,6 +29,7 @@ public class ControllerFacade implements IController {
      * @param model
      *            the model
      */
+    
     public ControllerFacade(final IView view, final IModel model) {
         super();
         this.view = view;
@@ -37,7 +42,7 @@ public class ControllerFacade implements IController {
      * @throws SQLException
      *             the SQL exception
      */
-    public void start() throws SQLException {
+ /*  public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getExampleById(1).toString());
 
         this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
@@ -50,7 +55,7 @@ public class ControllerFacade implements IController {
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
-    }
+    } */
 
     /**
      * Gets the view.
@@ -70,10 +75,17 @@ public class ControllerFacade implements IController {
         return this.model;
 
     }
-
-    public void setViewSystem(IViewSystem viewSystem)
+    
+    
+    
+    public void setViewSystem(final IViewSystem viewSystem)
     {
     	
     }
+
+	public void orderPerform(UserOrder userOrder) {
+		
+		
+	}
     
 }
