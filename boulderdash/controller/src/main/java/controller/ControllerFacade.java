@@ -6,6 +6,7 @@ import java.util.List;
 import model.Example;
 import model.IModel;
 import view.IView;
+import view.IViewSystem;
 
 public class ControllerFacade implements IController {
 
