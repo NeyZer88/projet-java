@@ -7,4 +7,5 @@
   </parent>
   <artifactId>contract</artifactId>
   <name>boulderdash.contract</name>
+  <packaging>pom</packaging>
 </project>
