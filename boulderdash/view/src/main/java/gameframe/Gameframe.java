@@ -1,10 +1,11 @@
 package gameframe;
 
 public class Gameframe {
+	
+	
 
-	public void GameFrame()
-	{
-		
+	public void GameFrame(){
+		this.setTitle ("boulderdash");
 	}
 	
 	public void keyPressed(){
