@@ -1,5 +1,4 @@
 package controller;
-
 import java.sql.SQLException; 
 import java.util.List;
 import model.Example;
@@ -38,20 +37,20 @@ public class ControllerFacade implements IOrderPerformer {
      * @throws SQLException
      *             the SQL exception
      */
- /*  public void start() throws SQLException {
+ public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getExampleById(1).toString());
 
         this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
 
-        final List<Example> examples = this.getModel().getAllExamples();
+       final List<Example> examples = this.getModel().getAllExamples();
         final StringBuilder message = new StringBuilder();
-        // a.append(" bar);
-        for (final Example example : examples) {
+        // a.append(" bar");
+       for (final Example example : examples) {
             message.append(example);
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
-    } */
+    } 
 
     /**
      * Gets the view.
@@ -69,7 +68,7 @@ public class ControllerFacade implements IOrderPerformer {
      */
     public IModel getModel() {
         return this.model;
-
+ 
     }
     
     
