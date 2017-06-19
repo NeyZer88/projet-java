@@ -8,6 +8,7 @@ public class Gameframe {
 		this.setTitle ("boulderdash");
 	}
 	
+
 	public void keyPressed(){
 		
 	}
