@@ -20,6 +20,10 @@ public class ControllerFacadeTest {
 
 	@Before
 	public void setUp() throws Exception {
+		
+		
+		
+		
 	}
 
 	@After
@@ -27,7 +31,17 @@ public class ControllerFacadeTest {
 	}
 
 	@Test
-	public void test() {
+	
+	
+	public void ControllerFacadeStart() {
+		try {
+		new ControllerFacade(null, null);
+		fail("wrong entries");
+		} catch (final Exception e) {
+		final String expected = "Strength out of range";
+		assertEquals(expected, e.getMessage());
+		}
+		
 		
 	}
 

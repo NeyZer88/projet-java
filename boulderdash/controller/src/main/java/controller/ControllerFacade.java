@@ -1,7 +1,5 @@
 package controller;
 import java.sql.SQLException; 
-=======
-
 import java.sql.SQLException;
 import java.util.List;
 import model.Example;
@@ -42,14 +40,14 @@ public class ControllerFacade implements IOrderPerformer {
      *             the SQL exception
      */
  public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+        this.getView().displayMessage(this.getModel().getLevel1.toString());
 
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
+        this.getView().displayMessage(this.getModel().getMapByName("Example 2").toString());
 
-       final List<Example> examples = this.getModel().getAllExamples();
-        final StringBuilder message = new StringBuilder();
+       final List<Map> map = this.getModel().getAllMap();
+        final StringBuilder map = new StringBuilder();
         // a.append(" bar");
-       for (final Example example : examples) {
+       for (final Map map : examples) {
             message.append(example);
             message.append('\n');
         }

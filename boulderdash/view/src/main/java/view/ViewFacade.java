@@ -26,6 +26,12 @@ public class ViewFacade implements IView {
     
     public void displayMaps(String map){
     	
-    };
+    }
+
+	@Override
+	public void displayMap() {
+		// TODO Auto-generated method stub
+		
+	};
 
 }
