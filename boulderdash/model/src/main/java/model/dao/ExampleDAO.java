@@ -4,9 +4,6 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
-
-import model.Example;
 
 /**
  * <h1>The Class ExampleDAO.</h1>
@@ -17,13 +14,16 @@ import model.Example;
 public abstract class ExampleDAO extends AbstractDAO {
 
     /** The sql example by id. */
-    private static String sqlExampleById   = "{call findExampleById(?)}";
+    // private static String sqlExampleById   = "{call findExampleById(?)}";
 
     /** The sql example by name. */
-    private static String sqlExampleByName = "{call findExampleByName(?)}";
+    // private static String sqlExampleByName = "{call findExampleByName(?)}";
 
     /** The sql all examples. */
-    private static String sqlAllExamples   = "{call findAllExamples()}";
+    private static String getLevel1   = "{call (Level1)}";
+    private static String getLevel2   = "{call (Level2)}";
+    private static String getLevel3   = "{call (Level3)}";
+    private static String getLevel4   = "{call (Level4)}";
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
@@ -40,7 +40,7 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
-    public static Example getExampleById(final int id) throws SQLException {
+    /**public static Example getExampleById(final int id) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExampleById);
         Example example = null;
         callStatement.setInt(1, id);
@@ -63,7 +63,7 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
-    public static Example getExampleByName(final String name) throws SQLException {
+    /**public static Example getExampleByName(final String name) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExampleByName);
         Example example = null;
 
@@ -78,6 +78,8 @@ public abstract class ExampleDAO extends AbstractDAO {
         return example;
     }
 
+	private Object connection;
+
     /**
      * Gets the all examples.
      *
@@ -85,17 +87,78 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
-    public static List<Example> getAllExamples() throws SQLException {
-        final ArrayList<Example> examples = new ArrayList<Example>();
-        final CallableStatement callStatement = prepareCall(sqlAllExamples);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
+	public static ArrayList<String> getLevel1() throws SQLException {
+	    final ArrayList<String> elementsMap = new ArrayList<String>();
+	    final CallableStatement callStatement = prepareCall(getLevel1);
+	    callStatement.setInt(1, line);
+	    if (callStatement.execute()) {
+	        final ResultSet result = callStatement.getResultSet();
+	   
+			
+			for (int i = 0; i < 15; i++)
+	        {
+	        	elementsMap.add(result.getString(i));
+	        }
+	        result.close();
+	    }
+	    return elementsMap;
+		}
 
-            for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
-                examples.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex)));
-            }
-            result.close();
+
+ public static ArrayList<String> getLevel2() throws SQLException {
+	    final ArrayList<String> elementsMap = new ArrayList<String>();
+	    final CallableStatement callStatement = prepareCall(getLevel2);
+	    callStatement.setInt(1, line);
+	    if (callStatement.execute()) {
+	        final ResultSet result = callStatement.getResultSet();
+	   
+			
+			for (int i = 0; i < 30; i++)
+	        {
+	        	elementsMap.add(result.getString(i));
+	        }
+	        result.close();
+	    }
+	    return elementsMap;
+		}
+
+
+	public static ArrayList<String> getLevel3() throws SQLException {
+	    final ArrayList<String> elementsMap = new ArrayList<String>();
+	    final CallableStatement callStatement = prepareCall(getLevel3);
+	    callStatement.setInt(1, line);
+	    if (callStatement.execute()) {
+	        final ResultSet result = callStatement.getResultSet();
+	   
+			
+			for (int i = 0; i < 30; i++)
+	        {
+	        	elementsMap.add(result.getString(i));
+	        }
+	        result.close();
+	    }
+	    return elementsMap;
+	}
+
+
+
+
+public static ArrayList<String> getLevel4(int line) throws SQLException {
+    final ArrayList<String> elementsMap = new ArrayList<String>();
+    final CallableStatement callStatement = prepareCall(getLevel4);
+    callStatement.setInt(1, line);
+    if (callStatement.execute()) {
+        final ResultSet result = callStatement.getResultSet();
+   
+		
+		for (int i = 0; i < 30; i++)
+        {
+        	elementsMap.add(result.getString(i));
         }
-        return examples;
+        result.close();
     }
+    return elementsMap;
+	}
 }
+
+
