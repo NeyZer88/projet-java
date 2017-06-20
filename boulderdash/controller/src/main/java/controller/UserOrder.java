@@ -1,11 +1,7 @@
 package controller;
 
-import java.awt.*;
-
 public class UserOrder implements IUserOrder {
-	
-	private int player;	
-	
+		
 
 	public  UserOrder(int player , Order order) {
 		
@@ -24,5 +20,4 @@ public class UserOrder implements IUserOrder {
 		return player;
 		
 	}
-
 }

@@ -12,25 +12,21 @@
       <groupId>fr.exia</groupId>
       <artifactId>contract</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>fr.exia</groupId>
       <artifactId>controller</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>fr.exia</groupId>
       <artifactId>view</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>fr.exia</groupId>
       <artifactId>model</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-      <type>pom</type>
     </dependency>
   </dependencies>
   <build>
@@ -57,5 +53,4 @@
       </plugin>
     </plugins>
   </build>
-  <packaging>pom</packaging>
 </project>

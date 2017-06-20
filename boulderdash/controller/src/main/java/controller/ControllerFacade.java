@@ -1,12 +1,10 @@
 package controller;
-import java.sql.SQLException; 
+
 import java.sql.SQLException;
-import java.util.List;
-import model.Example;
+import java.util.Map;
+
 import model.IModel;
 import view.IView;
-import view.IViewSystem;
-
 
 
 public class ControllerFacade implements IOrderPerformer {
