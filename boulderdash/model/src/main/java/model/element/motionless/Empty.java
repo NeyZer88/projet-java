@@ -1,5 +1,5 @@
 package model.element.motionless;
 
-public class Empty {
+public class Empty extends Mineral{
 	private String SPRITE = "EMPTY.PNG";
 }
