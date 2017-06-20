@@ -13,6 +13,24 @@ public abstract class LevelsDAO  extends AbstractDAO{
     private static String getLevel3   = "{call (Level3)}";
     private static String getLevel4   = "{call (Level4)}";
     private static String getLevel5   = "{call (Level5)}";
+    private static String getInfoMap   = "{call (infomap)}";
+    
+    
+public static ArrayList<String> getInfoMap(int line) throws SQLException {
+        final ArrayList<String> elementsMap = new ArrayList<String>();
+        final CallableStatement callStatement = prepareCall(getInfoMap);
+        callStatement.setInt(1, line);
+        if (callStatement.execute()) {
+            final ResultSet result = callStatement.getResultSet();
+       
+    		for (int i = 0; i < 5; i++)
+            {
+            	elementsMap.add(result.getString(i));
+            }
+            result.close();
+        }
+        return elementsMap;
+    	}
     
 public static ArrayList<String> getLevel1(int line) throws SQLException {
     final ArrayList<String> elementsMap = new ArrayList<String>();
