@@ -1,10 +1,5 @@
 package model.dao;
 
-import java.sql.CallableStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-
 /**
  * <h1>The Class ExampleDAO.</h1>
  *
@@ -20,10 +15,7 @@ public abstract class ExampleDAO extends AbstractDAO {
     // private static String sqlExampleByName = "{call findExampleByName(?)}";
 
     /** The sql all examples. */
-    private static String getLevel1   = "{call (Level1)}";
-    private static String getLevel2   = "{call (Level2)}";
-    private static String getLevel3   = "{call (Level3)}";
-    private static String getLevel4   = "{call (Level4)}";
+
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
@@ -87,7 +79,7 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
-	public static ArrayList<String> getLevel1() throws SQLException {
+	public static ArrayList<String> getLevel1(int line) throws SQLException {
 	    final ArrayList<String> elementsMap = new ArrayList<String>();
 	    final CallableStatement callStatement = prepareCall(getLevel1);
 	    callStatement.setInt(1, line);
@@ -105,7 +97,7 @@ public abstract class ExampleDAO extends AbstractDAO {
 		}
 
 
- public static ArrayList<String> getLevel2() throws SQLException {
+ public static ArrayList<String> getLevel2(int line) throws SQLException {
 	    final ArrayList<String> elementsMap = new ArrayList<String>();
 	    final CallableStatement callStatement = prepareCall(getLevel2);
 	    callStatement.setInt(1, line);
@@ -123,7 +115,7 @@ public abstract class ExampleDAO extends AbstractDAO {
 		}
 
 
-	public static ArrayList<String> getLevel3() throws SQLException {
+	public static ArrayList<String> getLevel3(int line) throws SQLException {
 	    final ArrayList<String> elementsMap = new ArrayList<String>();
 	    final CallableStatement callStatement = prepareCall(getLevel3);
 	    callStatement.setInt(1, line);
