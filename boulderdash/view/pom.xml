@@ -12,6 +12,7 @@
       <groupId>fr.exia</groupId>
       <artifactId>contract</artifactId>
       <version>0.0.1-SNAPSHOT</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
   <packaging>pom</packaging>

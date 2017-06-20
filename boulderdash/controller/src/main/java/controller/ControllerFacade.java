@@ -6,7 +6,10 @@ import model.Example;
 import model.IModel;
 import view.IView;
 import view.IViewSystem;
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'master' of https://github.com/NeyZer88/projet-java.git
 
 
 public class ControllerFacade implements IOrderPerformer {
