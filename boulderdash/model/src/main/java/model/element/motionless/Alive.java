@@ -1,6 +1,6 @@
 package model.element.motionless;
 
-public class Alive {
+public class Alive extends MotionLessElement{
 	
 	public void die(){
 	}
