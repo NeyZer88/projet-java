@@ -1,5 +1,5 @@
 package model.element.motionless;
 
-public class Ennemies {
+public class Ennemies extends Alive{
 
 }
