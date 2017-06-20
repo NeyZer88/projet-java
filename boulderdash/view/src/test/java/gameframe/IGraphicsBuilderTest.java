@@ -1,5 +1,5 @@
 
-public class IGraphicsBuildertest {
+public class IGraphicsBuilderTest {
 	
 	@test
 

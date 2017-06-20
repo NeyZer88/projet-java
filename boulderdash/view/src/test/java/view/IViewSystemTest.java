@@ -1,5 +1,5 @@
 
-public class IViewSystemtest {
+public class IViewSystemTest {
 	
 	@test
 

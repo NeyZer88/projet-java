@@ -1,5 +1,5 @@
 
-public class ViewFacadetest {
+public class ViewFacadeTest {
 	
 	@test
 
