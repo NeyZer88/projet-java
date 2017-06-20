@@ -32,7 +32,6 @@ public class ControllerFacadeTest {
 
 	@Test
 	
-	
 	public void ControllerFacadeStart() {
 		try {
 		new ControllerFacade(null, null);

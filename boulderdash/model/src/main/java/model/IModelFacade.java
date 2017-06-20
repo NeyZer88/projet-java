@@ -1,7 +1,6 @@
 package model;
 
 public interface IModelFacade {
-<<<<<<< HEAD
 
 	void getLevels1();
 
@@ -14,7 +13,4 @@ public interface IModelFacade {
 	void getLevels5();
 
 	
-=======
- 
->>>>>>> branch 'master' of https://github.com/NeyZer88/projet-java.git
 }

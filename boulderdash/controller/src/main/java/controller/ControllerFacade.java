@@ -6,10 +6,7 @@ import model.Example;
 import model.IModel;
 import view.IView;
 import view.IViewSystem;
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/NeyZer88/projet-java.git
 
 
 public class ControllerFacade implements IOrderPerformer {
@@ -43,15 +40,12 @@ public class ControllerFacade implements IOrderPerformer {
      *             the SQL exception
      */
  public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getLevel1.toString());
+        this.getView().displayMessage(this.getModel().getLevel().toString());
 
-        this.getView().displayMessage(this.getModel().getMapByName("Example 2").toString());
-
-       final List<Map> map = this.getModel().getAllMap();
         final StringBuilder map = new StringBuilder();
         // a.append(" bar");
-       for (final Map map : examples) {
-            message.append(example);
+       for (final Map map : level) {
+            message.append(level);
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
@@ -77,7 +71,6 @@ public class ControllerFacade implements IOrderPerformer {
     }
     
     
-    
     public void setViewSystem(final IViewSystem viewSystem)
     {
     	
@@ -85,7 +78,5 @@ public class ControllerFacade implements IOrderPerformer {
 
 	public void orderPerform(UserOrder userOrder) {
 		
-		
 	}
-    
 }
