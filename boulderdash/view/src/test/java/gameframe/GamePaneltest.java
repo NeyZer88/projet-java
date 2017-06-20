@@ -1,4 +1,6 @@
 
 public class GamePaneltest {
+	
+	@test
 
 }

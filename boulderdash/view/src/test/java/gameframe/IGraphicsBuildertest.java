@@ -1,4 +1,6 @@
 
 public class IGraphicsBuildertest {
+	
+	@test
 
 }
