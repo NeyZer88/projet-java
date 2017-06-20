@@ -1,13 +1,12 @@
 package model.element.motionless;
 
 public class Character extends Alive{
-
-	private static String SPRITE = "HERO.PNG";
 	
+	protected static String SPRITE = "HERO.PNG";
 	private int mouvement;
 	private int x;
 	private int y;
-	
+
 	public int getX() {
 		return x;
 	}
@@ -19,6 +18,7 @@ public class Character extends Alive{
 	public int getY() {
 		return y;
 	}
+	
 	public void setY(int y) {
 		this.y = y;
 	}
@@ -43,12 +43,7 @@ public class Character extends Alive{
 	public void goLeft(){
 	}
 
-	/**
-	 * @return the sPRITE
-	 */
 	public static String getSPRITE() {
 		return SPRITE;
 	}
-
-	
 }
