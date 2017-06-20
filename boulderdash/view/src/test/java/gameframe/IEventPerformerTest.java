@@ -1,5 +1,5 @@
 
-public class IEventPerformer {
+public class IEventPerformerTest {
 	
 	@test
 

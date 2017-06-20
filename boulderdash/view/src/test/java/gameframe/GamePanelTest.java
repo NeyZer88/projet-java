@@ -1,5 +1,5 @@
 
-public class GamePaneltest {
+public class GamePanelTest {
 	
 	@test
 

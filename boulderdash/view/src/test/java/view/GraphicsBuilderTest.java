@@ -1,5 +1,5 @@
 
-public class GraphicsBuildertest {
+public class GraphicsBuilderTest {
 	
 	@test
 

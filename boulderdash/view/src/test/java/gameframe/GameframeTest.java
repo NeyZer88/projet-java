@@ -1,5 +1,5 @@
 
-public class Gameframetest {
+public class GameframeTest {
 
 	@test
 	
