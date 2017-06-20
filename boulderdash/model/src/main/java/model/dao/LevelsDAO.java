@@ -66,25 +66,68 @@ public static ArrayList<String> getLevel3(int line) throws SQLException {
         result.close();
     }
     return elementsMap;
-}
+	}
 
 
 
 
-public static ArrayList<String> getLevel4(int line) throws SQLException {
-final ArrayList<String> elementsMap = new ArrayList<String>();
-final CallableStatement callStatement = prepareCall(getLevel4);
-callStatement.setInt(1, line);
-if (callStatement.execute()) {
-    final ResultSet result = callStatement.getResultSet();
+public static ArrayList<String> getLevel5(int line) throws SQLException {
+	final ArrayList<String> elementsMap = new ArrayList<String>();
+	final CallableStatement callStatement = prepareCall(getLevel4);
+	callStatement.setInt(1, line);
+	if (callStatement.execute()) {
+		final ResultSet result = callStatement.getResultSet();
 
 	
-	for (int i = 0; i < 30; i++)
-    {
-    	elementsMap.add(result.getString(i));
-    }
-    result.close();
+		for (int i = 0; i < 30; i++)
+		{
+			elementsMap.add(result.getString(i));
+		}
+		result.close();
+	}
+	return elementsMap;
 }
-return elementsMap;
+	
+public static ArrayList<String> getLevel4(int line) throws SQLException {
+	final ArrayList<String> elementsMap = new ArrayList<String>();
+	final CallableStatement callStatement = prepareCall(getLevel4);
+	callStatement.setInt(1, line);
+	if (callStatement.execute()) {
+		final ResultSet result = callStatement.getResultSet();
+
+	
+		for (int i = 0; i < 30; i++)
+		{
+			elementsMap.add(result.getString(i));
+		}
+		result.close();
+	}
+	return elementsMap;
+	}
+
+	public String getElement(int idLevel, int line, int collumn) throws SQLException{
+		String element = "";
+		ArrayList<String> elementRow = new ArrayList<String>();
+		
+		switch(idLevel) {
+
+		case 1:
+				elementRow = getLevel1(line);
+				break;
+		case 2: 
+				elementRow= getLevel2(line);
+				break;
+		case 3:
+				elementRow= getLevel3(line);
+				break;
+		case 4:
+            	elementRow= getLevel4(line);
+            	break;
+		case 5:
+            	elementRow= getLevel5(line);
+            	break;
+		}
+		element = elementRow.get(collumn);
+		return element;
 }
 }
