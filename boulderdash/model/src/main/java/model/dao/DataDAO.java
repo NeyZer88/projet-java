@@ -25,7 +25,7 @@ public static ArrayList<String> getHeightMap(int line) throws SQLException {
 	}
 	return heightMap;
 	}
-
+ 
 public static ArrayList<String> getWidthMap(int line) throws SQLException {
 	final ArrayList<String> widthMap = new ArrayList<String>();
 	final CallableStatement callStatement = prepareCall(getWidthMap);
