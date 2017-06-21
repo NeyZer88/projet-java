@@ -68,7 +68,7 @@ public class ControllerFacade implements IOrderPerformer {
     public void setViewSystem(IViewSystem viewsystem){
     	
   
-    	viewsystem.displayMaps(this.getModel().getLevels());
+    	viewsystem.displayMap(this.getModel().getLevels());
     	
     	
 

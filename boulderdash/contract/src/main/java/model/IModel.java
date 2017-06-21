@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IModel {
 
-	public void getLevels(int id);
+	public String getLevels();
 
 }

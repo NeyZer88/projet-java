@@ -21,7 +21,7 @@ public class LevelTest {
 
     @Before
     public void setUp() throws Exception {
-        this.level = new Level(1, "Example test");
+        this.level = new Level(1, "Level test");
     }
 
     @After
@@ -36,22 +36,22 @@ public class LevelTest {
 
     @Test
     public void testGetName() {
-        final String expected = "Example test";
+        final String expected = "Level test";
         assertEquals(expected, this.level.getName());
     }
 
     @Test
     public void testSetName() {
-        String expected = "Example test";
+        String expected = "Level test";
         assertEquals(expected, this.level.getName());
-        expected = "Example test modified";
+        expected = "Level test modified";
         this.level.setName(expected);
         assertEquals(expected, this.level.getName());
     }
 
     @Test
     public void testToString() {
-        final String expected = "1 : Example test";
+        final String expected = "1 : Level test";
         assertEquals(expected, this.level.toString());
     }
 
