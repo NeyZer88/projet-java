@@ -6,6 +6,7 @@ public class Map {
 	private int height;
 	private int view;
 	private int quota;
+
 	
 	
 	public int show(int yStart) {
