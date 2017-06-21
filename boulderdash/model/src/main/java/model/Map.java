@@ -1,15 +1,22 @@
 package model;
 
-public class Map {
+import javax.lang.model.element.Element;
 
+import model.dao.LevelsDAO;
+
+public class Map {
+	private int IElement[][]
 	private int width;
 	private int height;
 	private int view;
 	private int quota;
+	String elementList;
+
+
 
 	
-	
 	public int show(int yStart) {
+		elementList = LevelsDAO.getElement(idLevel, line, collumn);
 		return yStart;
 		
 	}
@@ -38,6 +45,12 @@ public class Map {
 	public void setQuota(int quota) {
 		this.quota = quota;
 	}
-		
+	public Element getOnTheMapXY(int x, int y){
+		return getOnTheMapXY(0, 0);
+	}
+	public void setOnTheMapXY(int x, int y){
+		this.setOnTheMapXY(x, y);
+	}
 
 }
+
