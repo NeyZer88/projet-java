@@ -1,6 +1,6 @@
 package model;
 
-public class Example {
+public class Level {
 
     /** The id. */
     private final int id;
@@ -16,7 +16,7 @@ public class Example {
      * @param name
      *            the name
      */
-    public Example(final int id, final String name) {
+    public Level(final int id, final String name) {
         super();
         this.id = id;
         this.name = name;
@@ -50,8 +50,6 @@ public class Example {
         this.name = name;
     }
 
-
-    @Override
     public String toString() {
         return this.getId() + " : " + this.getName();
     }

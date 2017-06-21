@@ -5,6 +5,32 @@ public class UserOrder implements IUserOrder {
 
 	public  UserOrder(int player , Order order) {
 		
+		switch(order)
+		{
+		case UP :
+			
+			
+			
+			break;
+		
+		
+		case DOWN :
+			
+			break;
+			
+		case LEFT :
+			
+			break;
+			
+			
+		case RIGHT :
+			
+			break;
+		
+
+		
+		}
+		
 		
 	}
 	

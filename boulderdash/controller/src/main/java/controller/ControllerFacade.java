@@ -5,15 +5,15 @@ import java.util.Map;
 
 import model.IModel;
 import view.IView;
-
+import view.IViewSystem;
+import model.IModelFacade;
 
 public class ControllerFacade implements IOrderPerformer {
 
-    /** The view. */
-    private final IView  view;
+    private final IView view;
 
-    /** The model. */
     private final IModel model;
+    
     
 
     /**
@@ -38,15 +38,9 @@ public class ControllerFacade implements IOrderPerformer {
      *             the SQL exception
      */
  public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getLevel().toString());
+        this.getView().displayMessage(this.getModel().getLevels());
 
-        final StringBuilder map = new StringBuilder();
-        // a.append(" bar");
-       for (final Map map : level) {
-            message.append(level);
-            message.append('\n');
-        }
-        this.getView().displayMessage(message.toString());
+
     } 
 
     /**
@@ -54,7 +48,7 @@ public class ControllerFacade implements IOrderPerformer {
      *
      * @return the view
      */
-    public IView getView() {
+    public IView getView(){
         return this.view;
     }
 
@@ -63,18 +57,27 @@ public class ControllerFacade implements IOrderPerformer {
      *
      * @return the model
      */
-    public IModel getModel() {
+    public IModel getModel(){
         return this.model;
  
     }
     
+  // void displayMessage(String message);
+  // void displayMap();
     
-    public void setViewSystem(final IViewSystem viewSystem)
-    {
+    public void setViewSystem(IViewSystem viewsystem){
     	
+    	
+    	viewsystem.displayMaps(this.getModel().getLevels());
+    	
+    	
+
     }
 
-	public void orderPerform(UserOrder userOrder) {
+	public void orderPerform(UserOrder userOrder){
+		
 		
 	}
+	
+	
 }
