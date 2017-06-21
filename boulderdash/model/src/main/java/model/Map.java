@@ -7,6 +7,7 @@ public class Map {
 	private int view;
 	private int quota;
 	
+	
 	public int show(int yStart) {
 		return yStart;
 		
