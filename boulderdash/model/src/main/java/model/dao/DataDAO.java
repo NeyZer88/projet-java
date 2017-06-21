@@ -39,7 +39,7 @@ public static ArrayList<String> getWidthMap(int line) throws SQLException {
 		}
 		result.close();
 	}
-	return widthMap;
+	return widthMap; 
 }
 public static ArrayList<String> getDiamondMap(int line) throws SQLException {
 		final ArrayList<String> diamondMap = new ArrayList<String>();

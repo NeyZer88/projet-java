@@ -21,7 +21,7 @@ public class Map {
 		
 	}
 	
-	public int getWidth() {
+	public int getWidth() { 
 		return width;
 	}
 	public void setWidth(int width) {

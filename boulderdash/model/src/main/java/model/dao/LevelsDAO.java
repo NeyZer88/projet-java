@@ -15,7 +15,7 @@ public abstract class LevelsDAO  extends AbstractDAO{
     private static String getLevel5   = "{call (Level5)}";
 
     
-    
+     
 
 public static ArrayList<String> getLevel1(int line) throws SQLException {
     final ArrayList<String> elementsMap = new ArrayList<String>();
