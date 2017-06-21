@@ -1,4 +1,4 @@
-package gameframe;
+package view;
 
 public interface IGraphicsBuilder {
 
