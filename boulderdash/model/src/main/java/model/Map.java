@@ -1,21 +1,31 @@
 package model;
 
-import javax.lang.model.element.Element;
+import java.sql.SQLException;
+
+import model.dao.DataDAO;
 import model.dao.LevelsDAO;
+import model.element.IElement;
+import model.element.motionless.MotionLessElement;
+import model.element.motionless.MotionlessElementFactory;
 
 public class Map {
-	private int IElement[][];
+	
+	private IElement OnTheMap;
 	private int width;
 	private int height;
 	private int view;
-	private int quota;
+	private int idLevel;
+	private int line;
+
 	String elementList;
 
 
 
 	
-	public int show(int yStart) {
-		elementList = LevelsDAO.getElement(idLevel, line, collumn);
+	public int show(int yStart) throws SQLException {
+        width = DataDAO.getWidthMap(line);
+        height = DataDAO.getHeightMap(line);
+      
 		return yStart;
 		
 	}
@@ -38,18 +48,25 @@ public class Map {
 	public void setView(int view) {
 		this.view = view;
 	}
-	public int getQuota() {
-		return quota;
+	public void obtainMap() throws SQLException {
+		int x;
+		int y;
+		        for(y = 0; y < height ; y++){
+
+		           for(x = 0; x < width ; x++){
+		                this.setOnTheMapXY(MotionlessElementFactory.getFromFileSprite(LevelsDAO.getElement(idLevel, x, y)), x, y);
+		            }
+
+		        }
+	
+		}
+
+	public IElement getOnTheMapXY(final int x, final int y){
+		return this.OnTheMap[x][y];
 	}
-	public void setQuota(int quota) {
-		this.quota = quota;
-	}
-	public Element getOnTheMapXY(int x, int y){
-		return getOnTheMapXY(0, 0);
-	}
-	public void setOnTheMapXY(int x, int y){
-		this.setOnTheMapXY(x, y);
+	
+	public void setOnTheMapXY(MotionLessElement motionLessElement, int x, int y){
+		this.OnTheMap[x][y] = motionLessElement;
 	}
 
 }
-

@@ -99,7 +99,7 @@ public static ArrayList<String> getLevel5(int line) throws SQLException {
 
 
 
-	public String getElement(int idLevel, int line, int collumn) throws SQLException{
+	public static String getElement(int idLevel, int line, int collumn) throws SQLException{
 		String element = "";
 		ArrayList<String> elementRow = new ArrayList<String>();
 		
