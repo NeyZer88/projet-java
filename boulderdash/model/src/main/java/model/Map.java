@@ -1,11 +1,10 @@
 package model;
 
 import javax.lang.model.element.Element;
-
 import model.dao.LevelsDAO;
 
 public class Map {
-	private int IElement[][]
+	private int IElement[][];
 	private int width;
 	private int height;
 	private int view;

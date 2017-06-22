@@ -1,12 +1,10 @@
 package controller;
 
 import java.sql.SQLException;
-import java.util.Map;
 
 import model.IModel;
 import view.IView;
 import view.IViewSystem;
-import model.IModelFacade;
 
 public class ControllerFacade implements IOrderPerformer {
 
@@ -67,14 +65,20 @@ public class ControllerFacade implements IOrderPerformer {
     
     public void setViewSystem(IViewSystem viewsystem){
     	
-  
-    	viewsystem.displayMap(this.getModel().getLevels());
+    	//path forNumber of diamonds model ==> view
+    	    	
+    
     	
-    	
+    	//path for sprite    model ==> view
 
+    	viewsystem.MapPath = getModel().getLevels();
+    	
     }
 
 	public void orderPerform(UserOrder userOrder){
+		
+		//key view ==> model
+		
 		
 		
 		

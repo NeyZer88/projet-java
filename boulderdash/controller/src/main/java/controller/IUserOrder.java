@@ -4,6 +4,6 @@ public interface IUserOrder {
 	
 	public  Order getOrder(Order order);
 	
-	public int getPlayer(int player);
+	public char getPlayer(char player);
 
 }
