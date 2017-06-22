@@ -10,6 +10,8 @@ public class ViewFacade implements IViewSystem {
 	
 	String path;
 	String message;
+	public String SpritePath = "";
+	public String MapPath = "";
 	protected GraphicsBuilder graphicsBuilders;
 	protected GameFrame gameFrame;
 	
