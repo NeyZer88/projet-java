@@ -10,7 +10,7 @@ import model.element.motionless.MotionlessElementFactory;
 
 public class Map {
 	
-	private IElement OnTheMap;
+	private IElement[][]OnTheMap;
 	private int width;
 	private int height;
 	private int view;
@@ -66,7 +66,7 @@ public class Map {
 	}
 	
 	public void setOnTheMapXY(MotionLessElement motionLessElement, int x, int y){
-		this.OnTheMap[x][y] = motionLessElement;
+		this.OnTheMap[x][y] = (IElement) motionLessElement;
 	}
 
 }

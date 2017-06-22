@@ -1,9 +1,8 @@
 package model.dao;
 
-import java.sql.CallableStatement;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class DataDAO extends AbstractDAO {
     private static String getDiamondMap   = "{call (diamondNeeded)}";
@@ -25,7 +24,7 @@ public static int getDiamondMap(final int idLevel) throws SQLException {
         }
         return diamond;
     }
-public static int getWidth(final int idLevel) throws SQLException {
+public static int getWidthMap(final int idLevel) throws SQLException {
     final java.sql.CallableStatement callStatement = prepareCall(getWidthMap);
     int width = 0;
     callStatement.setInt(1, idLevel);
@@ -40,7 +39,7 @@ public static int getWidth(final int idLevel) throws SQLException {
     }
     return width;
 }
-public static int getHeight(final int idLevel) throws SQLException {
+public static int getHeightMap(final int idLevel) throws SQLException {
     final java.sql.CallableStatement callStatement = prepareCall(getHeightMap);
     int height = 0;
     callStatement.setInt(1, idLevel);
