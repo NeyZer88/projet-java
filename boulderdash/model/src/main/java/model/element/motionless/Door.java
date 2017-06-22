@@ -1,9 +1,13 @@
 package model.element.motionless;
 
-public class Door extends Mineral{
+import model.element.Permeability;
+import model.element.Sprite;
+
+public class Door extends MotionLessElement{
 	
 	private String SPRITE = "DOOR.PNG";
-	protected boolean destructible(){
+	
+	public boolean destructible(){
 		return false;
 	}
 }
