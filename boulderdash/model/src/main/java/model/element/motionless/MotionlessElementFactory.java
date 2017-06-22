@@ -4,12 +4,8 @@ import model.element.Permeability;
 
 public abstract class MotionlessElementFactory {
 	
-	
-	
 	private static final Wallgame wallgame = new Wallgame();
 		
-	
-	
 	private static final Wallboard wallboard = new Wallboard();
 	
 	private static final Empty empty = new Empty();
@@ -17,8 +13,6 @@ public abstract class MotionlessElementFactory {
 	private static final Door door = new Door();
 	
 	private static MotionLessElement[] MotionLessElement = {wallgame, wallboard, empty, door, };
-	
-	
 	
 	public static MotionLessElement createWallboard(){
 		return wallboard;

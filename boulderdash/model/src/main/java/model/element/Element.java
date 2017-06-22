@@ -8,7 +8,6 @@ public abstract class Element{
 	public static int y;
 	public int HEIGHT = 16;
 	public int WIDTH  = 16;
-	public int immortal;
 	protected Permeability permeability;
 	protected static String sprite;
 
@@ -36,22 +35,14 @@ public abstract class Element{
 	}
 
 	public void goUp() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public void goDown() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public void goRight() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public void goLeft() {
-		// TODO Auto-generated method stub
-		
 	}
 }
