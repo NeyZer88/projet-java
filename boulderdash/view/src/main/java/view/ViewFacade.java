@@ -19,7 +19,6 @@ public class ViewFacade implements IView {
     /*
      * @see view.IView#displayMessage(java.lang.String)
      */
-    @Override
     public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(this, "message\n attention", "boulderdash", JOptionPane.WARNING_MESSAGE);
     }
@@ -28,7 +27,6 @@ public class ViewFacade implements IView {
     	
     }
 
-	@Override
 	public void displayMap() {
 		// TODO Auto-generated method stub
 		

@@ -3,12 +3,17 @@ package view;
 import java.awt.Graphics;
 import java.awt.image.ImageObserver;
 
-import model.IModel;
+import model.IModelFacade;
 
 public class GraphicsBuilder {
 	
-	public IModel GraphicBuilder(IModel ModelFacade){
-		return ModelFacade;
+	public IModelFacade GraphicBuilder(IModelFacade ModelFacade){
+		IModelFacade modelFacade;
+		
+		public GraphicsBuilder(){
+			this.modelFacade = new ModelFacade();
+			this.modelFacade.setModelFacade(this);
+		}
 		
 		
 		

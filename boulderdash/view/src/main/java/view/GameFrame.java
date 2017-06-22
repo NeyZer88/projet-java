@@ -2,13 +2,14 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import keylistener.TitreKeyListener;
 
-public class Gameframe {
+public class GameFrame implements KeyListener{
 	
 	
 
@@ -16,17 +17,6 @@ public class Gameframe {
 		this.setTitle ("boulderdash");
 	}
 	
-	public void keyPressed(){
-		
-	}
-	
-	public void keyReleased(){
-		
-	}
-	
-	public void keyTyped(){
-		
-	}
 	
 	public class TestKeyListener extends JFrame {
 	    private static final long serialVersionUID = -5222658361778310082L;
@@ -45,3 +35,24 @@ public class Gameframe {
 	
 
 }
+
+
+
+	public void keyPressed(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+	
+
+	}
+
+	}}
