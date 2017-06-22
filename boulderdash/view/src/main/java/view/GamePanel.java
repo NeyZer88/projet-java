@@ -3,7 +3,7 @@ package view;
 public class GamePanel {
 	protected IGraphicsBuilder applyModelToGraphic;
 	
-	public IGraphicsBuilder gets IGraphicsBuilder () {
+	public IGraphicsBuilder getsIGraphicsBuilder () {
 		return applyModelToGraphic;
 		
 	}
@@ -11,6 +11,17 @@ public class GamePanel {
 	public void setIGraphicsBuilder (IGraphicsBuilder applyModelToGraphic) {
 		this.applyModelToGraphic = applyModelToGraphic;
 		applyModelToGraphic.setGamePanel (this);
+	}
+
+	
+	//getter and setter
+	
+	public IGraphicsBuilder getApplyModelToGraphic() {
+		return applyModelToGraphic;
+	}
+
+	public void setApplyModelToGraphic(IGraphicsBuilder applyModelToGraphic) {
+		this.applyModelToGraphic = applyModelToGraphic;
 	}
 
 }

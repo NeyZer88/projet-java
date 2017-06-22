@@ -1,14 +1,16 @@
 package view;
 
+import controller.IOrderPerformer;
 
 public class EventPerformer implements IEventPerformer {
 	protected IOrderPerformer orderPerformer;
 	
 	public IOrderPerformer getIOrderPerformer(){
-		return orderPreformer;
+		return orderPerformer;
 		
 	}
 	
+	controller.UserOrder UserOrder = new controller.UserOrder(0, null);
 	
 
 }

@@ -1,6 +1,6 @@
 package view;
 
-import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
@@ -8,7 +8,8 @@ import javax.swing.JOptionPane;
  */
 public class ViewFacade implements IViewSystem {
 	
-	
+	String path;
+	String message;
 	protected GraphicsBuilder graphicsBuilders;
 	protected GameFrame gameFrame;
 	
@@ -19,7 +20,14 @@ public class ViewFacade implements IViewSystem {
 		this.gameFrame.setGameFrame(this);
 	}
 	
+	//affiche la map
 	public void displayMaps (int x, int y){
+		this.setTitle("Boulderdash");
+		this.setSize(x*16, y*16);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false); //block windows size
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
 	}
