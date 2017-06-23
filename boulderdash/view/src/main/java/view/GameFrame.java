@@ -15,25 +15,22 @@ public class GameFrame extends JFrame implements KeyListener{
 	public GameFrame(view.GamePanel gamePanel, IEventPerformer eventPerformer, int keyCode) throws HeadlessException {
 		super();
 		GamePanel = gamePanel;
-		this.eventPerformer = eventPerformer;
-		this.keyCode = keyCode;
+		GameFrame.eventPerformer = eventPerformer;
+		GameFrame.keyCode = keyCode;
+		
 	}
 
-	public GameFrame() {
-		// TODO Auto-generated constructor stub
-	}
-
-	GamePanel GamePanel = new GamePanel();
+	static GamePanel GamePanel = new GamePanel();
 	private static final long serialVersionUID = -5222658361778310082L;
-	protected IEventPerformer eventPerformer;
-	private int keyCode;
+	protected static IEventPerformer eventPerformer;
+	private static int keyCode;
 	
 	public IEventPerformer getIEventPerformer(){
 		return eventPerformer;
 	}
 	
 	public void setIEventPerformer (IEventPerformer eventPerformer){
-		this.eventPerformer = eventPerformer;
+		GameFrame.eventPerformer = eventPerformer;
 		eventPerformer.setGameFrame(this);
 	}
 	
@@ -59,7 +56,7 @@ public class GameFrame extends JFrame implements KeyListener{
         // build a windows type KeyListener 
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                KeyListener frame = new GameFrame();
+                KeyListener frame = new GameFrame(GamePanel, eventPerformer, keyCode);
                 ((Window) frame).setVisible(false);
             }
         });
@@ -87,7 +84,7 @@ public class GameFrame extends JFrame implements KeyListener{
 	}
 	
 	public void setkeyCode (int keyCode){
-		this.keyCode = keyCode;
+		GameFrame.keyCode = keyCode;
 	}
 
 	public GamePanel getGamePanel() {
@@ -103,7 +100,7 @@ public class GameFrame extends JFrame implements KeyListener{
 	}
 
 	public void setEventPerformer(IEventPerformer eventPerformer) {
-		this.eventPerformer = eventPerformer;
+		GameFrame.eventPerformer = eventPerformer;
 	}
 
 	public int getKeyCode() {
@@ -111,11 +108,10 @@ public class GameFrame extends JFrame implements KeyListener{
 	}
 
 	public void setKeyCode(int keyCode) {
-		this.keyCode = keyCode;
+		GameFrame.keyCode = keyCode;
 	}
 
 	public void setGameFrame(ViewFacade viewFacade) {
-		// TODO Auto-generated method stub
 		
 	}
 	}

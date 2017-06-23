@@ -2,6 +2,8 @@ package view;
 
 import controller.IOrderPerformer;
 
+
+
 public class EventPerformer implements IEventPerformer {
 	protected IOrderPerformer orderPerformer;
 	
@@ -13,11 +15,15 @@ public class EventPerformer implements IEventPerformer {
 	controller.UserOrder UserOrder = new controller.UserOrder(0, null);
 
 	
-	//getter and setter
+	/*
+	 * getter and setter
+	 */
+	
+	
 	public IOrderPerformer getOrderPerformer() {
 		return orderPerformer;
 	}
-
+	
 	public void setOrderPerformer(IOrderPerformer orderPerformer) {
 		this.orderPerformer = orderPerformer;
 	}
@@ -32,7 +38,6 @@ public class EventPerformer implements IEventPerformer {
 
 	@Override
 	public void setGameFrame(GameFrame gameFrame) {
-		// TODO Auto-generated method stub
 		
 	}
 	

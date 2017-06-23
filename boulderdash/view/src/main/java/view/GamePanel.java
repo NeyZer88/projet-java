@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class GamePanel extends JPanel{
 	/**
-	 * 
+	 * GamePanel create panel
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -40,9 +40,11 @@ public class GamePanel extends JPanel{
 		String adress = "/boulderdash/sprites/";
 		String adresseSprite = adress; 
 		String message = "diamond needed : " ;
-		String messageScore = message;
 		
 		
+		/*
+		 * reading the File to display the sprite
+		 */
 		try {
 			sprite = ImageIO.read(new File(adresseSprite));
 		} catch (IOException e) {
@@ -50,17 +52,19 @@ public class GamePanel extends JPanel{
 			e.printStackTrace();
 		}
 		
-	
+		/*
+		 * determinate the size of panel
+		 */
 		g.drawImage(sprite,WIDTH*16,HEIGHT*16, this);
-		g.drawString(messageScore , 0 , 650);
+		g.drawString(message , 0 , 650); 
 		
 		
-		
-		System.out.println(adresseSprite);
 	}
 
 	
-	//getter and setter
+	/*
+	 * getter and setter
+	 */
 	
 	public IGraphicsBuilder getApplyModelToGraphic() {
 		return applyModelToGraphic;

@@ -3,6 +3,8 @@ package model;
 import java.sql.SQLException;
 import java.util.List;
 
+import view.GraphicsBuilder;
+
 public class ModelFacade implements IModelFacade {
 
 
@@ -31,6 +33,11 @@ public class ModelFacade implements IModelFacade {
 	}
 
 	public void getLevels5() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setModelFacade(GraphicsBuilder graphicsBuilder) {
 		// TODO Auto-generated method stub
 		
 	}

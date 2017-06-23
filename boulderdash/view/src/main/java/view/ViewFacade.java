@@ -1,17 +1,15 @@
 package view;
 
 import javax.swing.JFrame;
-import view.GameFrame; 
-import javax.swing.JPanel;
 
 /**
  * The Class ViewFacade provides a facade of the View component.</h1>
 
  */
-public class ViewFacade extends JFrame implements IViewSystem {
+public abstract class ViewFacade extends JFrame implements IViewSystem {
 	
 	/**
-	 * 
+	 * variable declaration
 	 */
 	private static final long serialVersionUID = 1L;
 	String path;
@@ -21,7 +19,11 @@ public class ViewFacade extends JFrame implements IViewSystem {
 	protected GraphicsBuilder graphicsBuilders;
 	protected GameFrame gameFrame;
 	
-	//affiche la map
+	/**
+	 * display maps
+	 * @param x
+	 * @param y
+	 */
 		public void displayMaps (int x, int y){
 			this.setTitle("Boulderdash");
 			this.setSize(x*16, y*16);
@@ -32,8 +34,12 @@ public class ViewFacade extends JFrame implements IViewSystem {
 			
 			
 		}
+		
+		/**
+		 * Instantiates a new view facade
+		 */
 
-
+		
 	public ViewFacade(){
 		this.graphicsBuilders = new GraphicsBuilder();
 		this.gameFrame = new GameFrame();
@@ -42,9 +48,6 @@ public class ViewFacade extends JFrame implements IViewSystem {
 	}
 	
 	
-    /**
-     * Instantiates a new view facade.
-     */
 	
 
 	@Override
@@ -53,18 +56,19 @@ public class ViewFacade extends JFrame implements IViewSystem {
 		return null;
 	}
 
-	@Override
-	public String displayMap(String message) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public void closeAll() {
 		// TODO Auto-generated method stub
 		
 	}
-	//getter and setter
+	
+	/**
+	 * getter and setter
+	 * @return
+	 */
+	
 
 	public String getPath() {
 		return path;
@@ -112,7 +116,9 @@ public class ViewFacade extends JFrame implements IViewSystem {
 
 	public void setGameFrame(GameFrame gameFrame) {
 		this.gameFrame = gameFrame;
-	};
+	}
+
+	
 
 }
 

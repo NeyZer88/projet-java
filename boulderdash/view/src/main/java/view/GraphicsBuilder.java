@@ -41,6 +41,13 @@ int getGlobalHeight(int globalHeight){
 	
 }
 
+
+
+public ViewFacade setViewFacade(ViewFacade viewFacade) {
+	return viewFacade;
+	
+}
+
 }
 
 
