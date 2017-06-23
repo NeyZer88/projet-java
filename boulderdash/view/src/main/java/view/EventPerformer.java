@@ -71,12 +71,9 @@ public class EventPerformer implements IEventPerformer {
 	}
 
 	public controller.UserOrder getUserOrder() {
-		return UserOrder;
+		return getUserOrder();
 	}
 
-	public void setUserOrder(controller.UserOrder userOrder) {
-		UserOrder = userOrder;
-	}
 
 	@Override
 	public void setGameFrame(GameFrame gameFrame) {

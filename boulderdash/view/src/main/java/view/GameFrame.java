@@ -9,7 +9,11 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-
+/**
+ * class GameFrame instantiate and use the frame to display a file
+ * @author VALENTIN
+ *
+ */
 public class GameFrame extends JFrame implements KeyListener{
 	
 	public GameFrame(view.GamePanel gamePanel, IEventPerformer eventPerformer, int keyCode) throws HeadlessException {
@@ -46,8 +50,10 @@ public class GameFrame extends JFrame implements KeyListener{
             
             frame.add(panel);
             
-            
-            frame.setSize(getWidth(), getHeight()); //taille d elecran
+            /**
+             * define the size of the frame and his visibility
+             */
+            frame.setSize(getWidth(), getHeight());
             frame.setVisible(true);
             
     }
