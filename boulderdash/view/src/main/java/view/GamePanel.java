@@ -3,7 +3,6 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
@@ -23,7 +22,7 @@ public class GamePanel extends JPanel{
 	
 	public IGraphicsBuilder getsIGraphicsBuilder () {
 		return applyModelToGraphic;
-							
+						
 	}
 	
 	public void setIGraphicsBuilder (IGraphicsBuilder applyModelToGraphic) {
@@ -56,7 +55,7 @@ public class GamePanel extends JPanel{
 		 * determinate the size of panel
 		 */
 		g.drawImage(sprite,WIDTH*16,HEIGHT*16, this);
-		g.drawString(message , 0 , 650); 
+		g.drawString(message , 150 , 150); 
 		
 		
 	}
