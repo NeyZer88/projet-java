@@ -21,8 +21,9 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
+    	
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-
+        // we try to start the loop, if it fail, there is a trace with the SQL exception
         try {
             controller.start();
         } catch (final SQLException exception) {
@@ -30,4 +31,4 @@ public abstract class Main {
         }
     }
 
-} //ah
+} 
