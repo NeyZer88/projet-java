@@ -1,9 +1,9 @@
-package model.element.motionless;
+package model.element.mobile;
 
+import model.element.MobileElement;
 import model.element.Permeability;
-import model.element.Sprite;
 
-public class Earth extends MotionLessElement{
+public class Earth extends MobileElement{
 	
 
 	Earth(int x, int y, String sprite, Permeability permeability) {
