@@ -76,17 +76,6 @@ public class ControllerFacade implements IOrderPerformer {
     	
     }
 
-    /**
-     * 
-     * 
-     * 
-     */
-	public void orderPerform(UserOrder userOrder){
-		
-		//Key Listener view ==> model
-				
-		
-	}
-	
+
 	
 }
