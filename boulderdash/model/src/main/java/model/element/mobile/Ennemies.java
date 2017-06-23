@@ -1,22 +1,17 @@
 package model.element.mobile;
 
-import java.io.IOException;
-
 import model.element.MobileElement;
 import model.element.Permeability;
 
-public class Rock extends MobileElement {
-
-	public Rock() {
+public class Ennemies extends MobileElement{
+	
+	public Ennemies() {
 		super(x, y, SPRITE, Permeability.BLOCKING);
 	}
 
-	private static final String SPRITE = "ROCK.PNG";
-	
-	public void fall(){
-	}
+	private static String SPRITE = "ENNEMIES.PNG";
 	
 	protected boolean destructible(){
-		return false;
+		return true;
 	}
 }

@@ -1,9 +1,9 @@
-package model.element.motionless;
- 
-import model.element.Permeability;
-import model.element.Sprite;
+package model.element.mobile;
 
-public class Empty extends MotionLessElement{
+import model.element.MobileElement;
+import model.element.Permeability;
+
+public class Empty extends MobileElement{
 	
 	Empty() {
 		super(x, y, sprite, Permeability.PENETRABLE);

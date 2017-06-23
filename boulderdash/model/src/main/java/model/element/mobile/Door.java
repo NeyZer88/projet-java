@@ -1,9 +1,9 @@
-package model.element.motionless;
+package model.element.mobile;
 
+import model.element.MobileElement;
 import model.element.Permeability;
-import model.element.Sprite;
 
-public class Door extends MotionLessElement{
+public class Door extends MobileElement{
 	
 	Door() {
 		super(x, y, sprite, Permeability.PENETRABLE);
