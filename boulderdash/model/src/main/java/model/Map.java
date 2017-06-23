@@ -5,11 +5,14 @@ import java.sql.SQLException;
 import model.dao.DataDAO;
 import model.dao.LevelsDAO;
 import model.element.IElement;
-import model.element.motionless.MotionLessElement;
-import model.element.motionless.MotionlessElementFactory;
+import model.element.MobileElement;
+import model.element.mobile.*;
 
 public class Map {
 	
+	public static Map Rock;
+	public static Map Empty;
+	public static Map Wallboard;
 	private IElement[][]OnTheMap;
 	private int width;
 	private int height;
@@ -19,15 +22,11 @@ public class Map {
 
 	String elementList;
 
-
-
-	
 	public int show(int yStart) throws SQLException {
         width = DataDAO.getWidthMap(line);
         height = DataDAO.getHeightMap(line);
       
 		return yStart;
-		
 	}
 	
 	public int getWidth() { 
@@ -54,19 +53,17 @@ public class Map {
 		        for(y = 0; y < height ; y++){
 
 		           for(x = 0; x < width ; x++){
-		                this.setOnTheMapXY(MotionlessElementFactory.getFromFileSprite(LevelsDAO.getElement(idLevel, x, y)), x, y);
+		                this.setOnTheMapXY(ElementFactory.getFromFileSprite(LevelsDAO.getElement(idLevel, x, y)), x, y);
 		            }
-
 		        }
-	
 		}
 
 	public IElement getOnTheMapXY(final int x, final int y){
 		return this.OnTheMap[x][y];
 	}
 	
-	public void setOnTheMapXY(MotionLessElement motionLessElement, int x, int y){
-		this.OnTheMap[x][y] = (IElement) motionLessElement;
+	public void setOnTheMapXY(MobileElement mobileElement, int x, int y){
+		this.OnTheMap[x][y] = (IElement) mobileElement;
 	}
 
 }
