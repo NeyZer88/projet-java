@@ -22,22 +22,22 @@ public class UserOrder implements IUserOrder {
 		
 		case UP:
 			
-			Character.getUP();
+			Character.goUp();
 			
 
 		case DOWN :
 			
-			Character.getDOWN();
+			Character.goDown();
 
 			
 		case LEFT :
 			
-			Character.getLEFT();
+			Character.goLeft();
 
 			
 		case RIGHT :
 
-			Character.getRIGHT();
+			Character.goRight();
 
 		
 		}
