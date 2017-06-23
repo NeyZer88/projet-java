@@ -3,7 +3,7 @@ package view;
 import javax.swing.JFrame;
 
 /**
- * <h1>The Class ViewFacade provides a facade of the View component.</h1>
+ * The Class ViewFacade provides a facade of the View component.</h1>
 
  */
 public class ViewFacade implements IViewSystem {
@@ -15,6 +15,18 @@ public class ViewFacade implements IViewSystem {
 	protected GraphicsBuilder graphicsBuilders;
 	protected GameFrame gameFrame;
 	
+	//affiche la map
+		public void displayMaps (int x, int y){
+			this.setTitle("Boulderdash");
+			this.setSize(x*16, y*16);
+			this.setLocationRelativeTo(null);
+			this.setResizable(false); //block windows size
+			this.setVisible(true);
+			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			
+			
+		}
+
 	public ViewFacade(){
 		this.graphicsBuilders = new GraphicsBuilder();
 		this.gameFrame = new GameFrame();
@@ -22,18 +34,7 @@ public class ViewFacade implements IViewSystem {
 		this.gameFrame.setGameFrame(this);
 	}
 	
-	//affiche la map
-	public void displayMaps (int x, int y){
-		this.setTitle("Boulderdash");
-		this.setSize(x*16, y*16);
-		this.setLocationRelativeTo(null);
-		this.setResizable(false); //block windows size
-		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
-	}
-
+	
     /**
      * Instantiates a new view facade.
      */

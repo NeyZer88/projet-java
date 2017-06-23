@@ -1,13 +1,12 @@
 package view;
 
+import java.awt.GridLayout;
 import java.awt.Window;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-
-import keylistener.TestKeyListener;
 
 
 public class GameFrame extends JFrame implements KeyListener{
@@ -25,6 +24,24 @@ public class GameFrame extends JFrame implements KeyListener{
 		this.eventPerformer = eventPerformer;
 		eventPerformer.setGameFrame(this);
 	}
+	
+	public void gameFrame(String[] args)
+    {
+            JFrame frame = new JFrame("boulderdash");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            
+            GamePanel panel = new view.GamePanel();
+            
+                    
+            panel.setLayout(new GridLayout(3,1));
+            
+            frame.add(panel);
+            
+            
+            frame.setSize(getWidth(), getHeight()); //taille d elecran
+            frame.setVisible(true);
+            
+    }
 	
 	public static void main(String[] args) {
         // build a windows type KeyListener 
