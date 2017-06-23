@@ -6,10 +6,13 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+/**
+ * GamePanel create panel
+ * @author VALENTIN
+ *
+ */
 public class GamePanel extends JPanel{
-	/**
-	 * GamePanel create panel
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	public GamePanel(IGraphicsBuilder applyModelToGraphic, BufferedImage sprite) {
@@ -52,7 +55,7 @@ public class GamePanel extends JPanel{
 		}
 		
 		/*
-		 * determinate the size of panel
+		 * determinate the size of panel and coordinated
 		 */
 		g.drawImage(sprite,WIDTH*16,HEIGHT*16, this);
 		g.drawString(message , 150 , 150); 

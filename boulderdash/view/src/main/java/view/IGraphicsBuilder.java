@@ -1,5 +1,10 @@
 package view;
 
+/**
+ * interface to define caracteristic of the panel
+ * @author UTILISATEUR
+ *
+ */
 public interface IGraphicsBuilder {
 	
 	

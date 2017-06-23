@@ -6,18 +6,30 @@ import java.awt.image.ImageObserver;
 import model.IModelFacade;
 import model.ModelFacade;
 
+/**
+ * define the parameter of the view about the model.
+ * @author VALENTIN
+ *
+ */
 public class GraphicsBuilder {
 	
 	private ModelFacade modelFacade;
 
 	public IModelFacade GraphicBuilder(IModelFacade ModelFacade){
 		IModelFacade modelFacade;
-		public GraphicsBuilder(){
-			this.modelFacade = new ModelFacade();
-			this.modelFacade.setModelFacade(this);
+		GraphicsBuilder(){
+			
 		}
 		
 	
+		
+	}
+
+
+
+private void GraphicsBuilder() {
+	this.modelFacade = new ModelFacade();
+	this.modelFacade.setModelFacade(this);
 		
 	}
 

@@ -86,7 +86,9 @@ public abstract class ViewFacade extends JFrame implements IViewSystem {
 	}
 	
 	
-
+	/**
+	 * close 
+	 */
 	
 	public void closeAll() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
