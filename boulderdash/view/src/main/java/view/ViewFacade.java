@@ -1,13 +1,36 @@
 package view;
 
+import java.awt.HeadlessException;
+
 import javax.swing.JFrame;
 
 /**
  * The Class ViewFacade provides a facade of the View component.</h1>
-
  */
+
 public abstract class ViewFacade extends JFrame implements IViewSystem {
 	
+	/**
+	 * constructor
+	 * @param path
+	 * @param message
+	 * @param spritePath
+	 * @param mapPath
+	 * @param graphicsBuilders
+	 * @param gameFrame
+	 * @throws HeadlessException
+	 */
+	public ViewFacade(String path, String message, String spritePath, String mapPath, GraphicsBuilder graphicsBuilders,
+			GameFrame gameFrame) throws HeadlessException {
+		super();
+		this.path = path;
+		this.message = message;
+		SpritePath = spritePath;
+		MapPath = mapPath;
+		this.graphicsBuilders = graphicsBuilders;
+		this.gameFrame = gameFrame;
+	}
+
 	/**
 	 * variable declaration
 	 */
@@ -32,7 +55,6 @@ public abstract class ViewFacade extends JFrame implements IViewSystem {
 			this.setVisible(true);
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
-			
 		}
 		
 		/**
@@ -42,25 +64,32 @@ public abstract class ViewFacade extends JFrame implements IViewSystem {
 		
 	public ViewFacade(){
 		this.graphicsBuilders = new GraphicsBuilder();
-		this.gameFrame = new GameFrame();
+		this.gameFrame = new GameFrame(null, null, getDefaultCloseOperation());
 		this.graphicsBuilders.setViewFacade(this);
 		this.gameFrame.setGameFrame(this);
 	}
 	
 	
 	
+	/**
+	 * display a message
+	 */
 
-	@Override
 	public String displayMessage(String message) {
-		// TODO Auto-generated method stub
-		return null;
+		this.setTitle("Boulderdash");
+		this.setSize(150, 150);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false); //block windows size
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		return message;
 	}
-
+	
 	
 
-	@Override
+	
 	public void closeAll() {
-		// TODO Auto-generated method stub
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 	
