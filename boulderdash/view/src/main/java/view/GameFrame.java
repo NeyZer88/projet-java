@@ -59,7 +59,9 @@ public class GameFrame extends JFrame implements KeyListener{
     }
 	
 	public static void main(String[] args) {
-        // build a windows type KeyListener 
+        /**
+         *  build a windows type KeyListener 
+         */
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 KeyListener frame = new GameFrame(GamePanel, eventPerformer, keyCode);
@@ -81,6 +83,9 @@ public class GameFrame extends JFrame implements KeyListener{
 
 
 	public void keyTyped(KeyEvent e) {	
+		/**
+		 * do nothing
+		 */
 	}
 	
 	//setter and getters keyCode
