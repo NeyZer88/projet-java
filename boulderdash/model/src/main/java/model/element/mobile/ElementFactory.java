@@ -3,10 +3,16 @@ package model.element.mobile;
 
 import model.element.MobileElement;
 
-/*Design patern factory*/
+/**
+ * Design patern factory
+ * @author Vincent
+ *
+ */
 public abstract class ElementFactory {
 	
-	/*Create new objects*/
+/**
+ * Create new objects
+ */
 	private static final Ennemies ennemies = new Ennemies();
 	
 	private static final Rock rock = new Rock();
@@ -26,7 +32,10 @@ public abstract class ElementFactory {
 	
 	private static MobileElement[] MobileElements = {diamond, character, rock, ennemies, wallgame, wallboard, empty, door};
 	
-	/*Constructors*/
+/**
+ * methods to instance
+ * @return
+ */
 	public static MobileElement createEnnemies(){
 		return ennemies;
 	}
@@ -59,7 +68,11 @@ public abstract class ElementFactory {
 		return door;
 	}
 	
-	/*The loop is used to fill the map with sprites, and returns an "empty" in case the condition of the "if" condition is not fulfilled*/
+/**
+ * The loop is used to fill the map with sprite, and returns an "empty" in case the condition of the "if" condition is not fulfilled
+ * @param fileSprite
+ * @return
+ */
 	public static MobileElement getFromFileSprite(String fileSprite){
 		for (final MobileElement mobileElement: MobileElements){
 			if (mobileElement.getSprite() == (fileSprite+".PNG")){

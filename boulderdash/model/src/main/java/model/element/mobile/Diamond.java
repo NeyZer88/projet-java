@@ -5,15 +5,21 @@ import model.element.Permeability;
 
 public class Diamond extends MobileElement{
 	
-	/*contructor*/
+/**
+ * constructor
+ */
 	public Diamond(){
 		super(x, y, SPRITE, Permeability.PENETRABLE);
 	}
 
-	/*define the Sprite*/
+/**
+ * define the sprite
+ */
 	private static String SPRITE = "DIAMOND.PNG";
 	
-	/*Destructible true*/
+/**
+ * Destructible true
+ */
 	protected boolean destructible(){
 		return true;
 	}

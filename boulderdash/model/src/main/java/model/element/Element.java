@@ -5,9 +5,9 @@ import model.Map;
 
 public abstract class Element implements IElement{
 
-	/**
-	 * declare variables
-	 */
+/**
+ * declare variables
+ */
 	
 	public static int x;
 	public static int y;
@@ -17,43 +17,48 @@ public abstract class Element implements IElement{
 	private Map[][] map;
 	protected static String sprite;
 
-	/**
-	 * Allows to return the value of "Sprite"
-	 */
+/**
+ * Allows to attibrute a value to Sprite
+ */
 	public void setSprite(){
 	}
 	
-	/**
-	 * Allows to create an attribute "Sprite"
-	 */
+/**
+ *  Allows to return a Sprite
+ * @return
+ */
 	public final String getSprite(){
 		return this.sprite;
 	}
 
-	/**
-	 * Allows you to create an attribute "Permeability"
-	 */
+/**
+ * Allows to return the permeability
+ * @return
+ */
 	public final Permeability getPermeability(){
 		return this.permeability;
 	}
 	
-	/**
-	 * Allows to return the value of Permeability
-	 */
+/**
+ * Allows to attribute a caracteristic to Permeability
+ * @param permeability
+ */
 	private void setPermeability(final Permeability permeability){
 		this.permeability = permeability;
 	}
 	
-	/**
-	 * defition of destructible elements
-	 */
+/**
+ * definition of destructible elements
+ * @return
+ */
 	protected boolean destructible(){
 	return false;
 	}
 	
-	/**
-	 * define the caracter when a sprite go on an other
-	 */
+/**
+ * define the caracter when a sprite go on an other
+ * @return
+ */
 	public boolean superpose(){
 	return false;
 	}
