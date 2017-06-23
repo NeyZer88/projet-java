@@ -15,11 +15,11 @@ public class GraphicsBuilder {
 	
 	private ModelFacade modelFacade;
 
-	public IModelFacade GraphicBuilder(IModelFacade ModelFacade){
+	public void GraphicBuilder(IModelFacade ModelFacade){
 		IModelFacade modelFacade;
-		GraphicsBuilder(){
+		GraphicsBuilder();
 			
-		}
+		
 		
 	
 		
