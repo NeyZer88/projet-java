@@ -1,18 +1,22 @@
 package view;
 
 /**
- * <h1>The Interface IView.</h1>
+ * 
+ * @author Starz
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
  */
 public interface IView {
 
-	//method to display the nomber of diamonds
+/**
+ * method to display the nomber of diamonds
 	
+ * @param message
+ */
     void displayMessage(String message);
     
-    //method to display the map on the view
+/**
+ *  method to display the map on the view
     
+ */
     void displayMap();
 }

@@ -1,5 +1,11 @@
 package model;
-
+/**
+ * 
+ * @author Starz
+ *
+ *class to instantiate a new level
+ *
+ */
 public class Level {
 
     /** The id. */
@@ -9,7 +15,7 @@ public class Level {
     private String    name;
 
     /**
-     * Instantiates a new level.
+     * method to instantiates a new level.
      *
      * @param id
      *            the id
@@ -51,7 +57,6 @@ public class Level {
     }
 
 
-    @Override
     public String toString() {
         return this.getId() + " : " + this.getName();
     }

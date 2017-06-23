@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * @author Starz
+ *  unit test for the method Level of the package model
+ */
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;

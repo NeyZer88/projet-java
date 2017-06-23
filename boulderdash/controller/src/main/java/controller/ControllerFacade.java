@@ -16,13 +16,11 @@ public class ControllerFacade implements IOrderPerformer {
     
     
 
+
     /**
      * Instantiates a new controller facade.
-     *
      * @param view
-     *            the view
      * @param model
-     *            the model
      */
     
     public ControllerFacade(final IView view, final IModel model) {
@@ -31,12 +29,10 @@ public class ControllerFacade implements IOrderPerformer {
         this.model = model;
     }
 
-    /**
-     * Start.
-     *
-     * @throws SQLException
-     *             the SQL exception
-     */
+/**
+ * 
+ * @throws SQLException
+ */
  public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getLevels());
 
@@ -61,12 +57,14 @@ public class ControllerFacade implements IOrderPerformer {
         return this.model;
  
     }
-  /**
-  *
-  * ViewSystem :
-  * void displayMessage(String message);
-  * void displayMap();
-  **/  
+
+    /**
+     * 
+     * @param MapPath
+     * 
+     * set the MapPath
+     */
+    
     public void setViewSystem(String MapPath){
     	
     	//path forNumber of diamonds model ==> view
@@ -78,6 +76,11 @@ public class ControllerFacade implements IOrderPerformer {
     	
     }
 
+    /**
+     * 
+     * 
+     * 
+     */
 	public void orderPerform(UserOrder userOrder){
 		
 		//Key Listener view ==> model
