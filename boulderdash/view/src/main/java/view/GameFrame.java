@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.GridLayout;
+import java.awt.HeadlessException;
 import java.awt.Window;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -11,6 +12,17 @@ import javax.swing.SwingUtilities;
 
 public class GameFrame extends JFrame implements KeyListener{
 	
+	public GameFrame(view.GamePanel gamePanel, IEventPerformer eventPerformer, int keyCode) throws HeadlessException {
+		super();
+		GamePanel = gamePanel;
+		this.eventPerformer = eventPerformer;
+		this.keyCode = keyCode;
+	}
+
+	public GameFrame() {
+		// TODO Auto-generated constructor stub
+	}
+
 	GamePanel GamePanel = new GamePanel();
 	private static final long serialVersionUID = -5222658361778310082L;
 	protected IEventPerformer eventPerformer;
@@ -69,12 +81,42 @@ public class GameFrame extends JFrame implements KeyListener{
 	}
 	
 	//setter and getters keyCode
+	
 	public int getkeyCode(){
 		return keyCode;
 	}
 	
 	public void setkeyCode (int keyCode){
 		this.keyCode = keyCode;
+	}
+
+	public GamePanel getGamePanel() {
+		return GamePanel;
+	}
+
+	public void setGamePanel(GamePanel gamePanel) {
+		GamePanel = gamePanel;
+	}
+
+	public IEventPerformer getEventPerformer() {
+		return eventPerformer;
+	}
+
+	public void setEventPerformer(IEventPerformer eventPerformer) {
+		this.eventPerformer = eventPerformer;
+	}
+
+	public int getKeyCode() {
+		return keyCode;
+	}
+
+	public void setKeyCode(int keyCode) {
+		this.keyCode = keyCode;
+	}
+
+	public void setGameFrame(ViewFacade viewFacade) {
+		// TODO Auto-generated method stub
+		
 	}
 	}
 	

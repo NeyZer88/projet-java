@@ -4,12 +4,13 @@ public class UserOrder implements IUserOrder {
 		
 //player move
 	
-	public  UserOrder(char player , Order order) {
+	public  UserOrder(int player , Order order) {
 		
 	
 		
 	}
 	
+
 	public Order getOrder(Order order){
 		
 		

@@ -8,6 +8,8 @@ import model.ModelFacade;
 
 public class GraphicsBuilder {
 	
+	private ModelFacade modelFacade;
+
 	public IModelFacade GraphicBuilder(IModelFacade ModelFacade){
 		IModelFacade modelFacade;
 		public GraphicsBuilder(){

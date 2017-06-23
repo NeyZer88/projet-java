@@ -1,13 +1,19 @@
 package view;
 
 import javax.swing.JFrame;
+import view.GameFrame; 
+import javax.swing.JPanel;
 
 /**
  * The Class ViewFacade provides a facade of the View component.</h1>
 
  */
-public class ViewFacade implements IViewSystem {
+public class ViewFacade extends JFrame implements IViewSystem {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String path;
 	String message;
 	public String SpritePath = "";
@@ -26,6 +32,7 @@ public class ViewFacade implements IViewSystem {
 			
 			
 		}
+
 
 	public ViewFacade(){
 		this.graphicsBuilders = new GraphicsBuilder();
@@ -56,6 +63,55 @@ public class ViewFacade implements IViewSystem {
 	public void closeAll() {
 		// TODO Auto-generated method stub
 		
+	}
+	//getter and setter
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getSpritePath() {
+		return SpritePath;
+	}
+
+	public void setSpritePath(String spritePath) {
+		SpritePath = spritePath;
+	}
+
+	public String getMapPath() {
+		return MapPath;
+	}
+
+	public void setMapPath(String mapPath) {
+		MapPath = mapPath;
+	}
+
+	public GraphicsBuilder getGraphicsBuilders() {
+		return graphicsBuilders;
+	}
+
+	public void setGraphicsBuilders(GraphicsBuilder graphicsBuilders) {
+		this.graphicsBuilders = graphicsBuilders;
+	}
+
+	public GameFrame getGameFrame() {
+		return gameFrame;
+	}
+
+	public void setGameFrame(GameFrame gameFrame) {
+		this.gameFrame = gameFrame;
 	};
 
 }
