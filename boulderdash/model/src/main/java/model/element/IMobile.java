@@ -1,4 +1,4 @@
-package model.element.mobile;
+package model.element;
 
 public interface IMobile {
 

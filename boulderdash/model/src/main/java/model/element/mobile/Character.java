@@ -10,10 +10,12 @@ public class Character extends MobileElement{
 	private static int x;
 	private static int y;
 
+	/*Constructor*/
 	public Character(){
 		super(x, y, SPRITE, Permeability.BLOCKING);
 	}
 
+	/*getter and setter of X*/
 	public int getX() {
 		return x; 
 	}
@@ -22,6 +24,7 @@ public class Character extends MobileElement{
 		this.x = x;
 	}
 	
+	/*getter and setter of Y*/
 	public int getY() {
 		return y;
 	}
@@ -30,6 +33,7 @@ public class Character extends MobileElement{
 		this.y = y;
 	}
 
+	/*getter and setter of Mouvement*/
 	public int getMouvement() {
 		return mouvement;
 	}
@@ -38,11 +42,13 @@ public class Character extends MobileElement{
 		this.mouvement = mouvement;
 	}
 
+	/*getter of SPRITE*/
 	public static String getSPRITE() {
 		return SPRITE;
 	}
 	
+	/*destructible true*/
 	protected boolean destructible(){
 		return true;
-	}
+	}	
 }
