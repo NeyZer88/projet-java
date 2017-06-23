@@ -61,17 +61,18 @@ public class ControllerFacade implements IOrderPerformer {
         return this.model;
  
     }
-    
-  // void displayMessage(String message);
-  // void displayMap();
-    
+  /**
+  *
+  * ViewSystem :
+  * void displayMessage(String message);
+  * void displayMap();
+  **/  
     public void setViewSystem(String MapPath){
     	
     	//path forNumber of diamonds model ==> view
     	    	
-    	//path for sprite    model ==> view
+    	//path for levels    model ==> view
 
-    
 
     	MapPath = getModel().getLevels();
     	
@@ -79,7 +80,7 @@ public class ControllerFacade implements IOrderPerformer {
 
 	public void orderPerform(UserOrder userOrder){
 		
-		//keylistener view ==> model
+		//Key Listener view ==> model
 				
 		
 	}
