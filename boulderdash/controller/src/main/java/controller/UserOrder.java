@@ -1,5 +1,6 @@
 package controller;
 
+import java.lang.Override;
 import model.element.mobile.Character;
 /**
  * 
@@ -7,55 +8,24 @@ import model.element.mobile.Character;
  *
  */
 
-public class UserOrder implements IUserOrder {
-		
-/**
- * 
- * transfer the order from the view to the model
- * 
- * @param order
- */
-	public  UserOrder( Order order) {
-		
-		switch(order)
-		{
-		
-		case UP:
-			
-			Character.goUp();
-			
+public class UserOrder implements UserOrderable {
 
-		case DOWN :
-			
-			Character.goDown();
+	private Order order;
 
-			
-		case LEFT :
-			
-			Character.goLeft();
+    /**
+     * @param order
+     */
+    public UserOrder(Order order) {
+        this.order = order;
+    }
 
-			
-		case RIGHT :
-
-			Character.goRight();
-
-		
-		}
-	
-		
-	}
-	
-/**
- * 
- * 
- */
-	public Order getOrder(Order order){
-		
-		
-		return order;
-		
-	}
-	
+    /**
+     * @return Order
+     */
+    @Override
+    public Order getOrder() {
+        return this.order;
+    }
 		
 
 	

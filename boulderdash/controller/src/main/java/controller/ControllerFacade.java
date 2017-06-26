@@ -76,6 +76,44 @@ public class ControllerFacade implements IOrderPerformer {
     	
     }
 
+    public void orderPerform(UserOrder userOrder) {
+        if (userOrder != null) {
+            Direction direction = null;
+            Entityable player = this.getModel().getPlayer();
+            int x = player.getX();
+            int y = player.getY();
 
+            switch (userOrder.getOrder()) {
+                case UP:
+                    direction = Direction.UP;
+                    player.setY(y - 16);
+                    break;
+
+                case DOWN:
+                    direction = Direction.DOWN;
+                    player.setY(y + 16);
+                    break;
+
+                case LEFT:
+                    direction = Direction.LEFT;
+                    player.setX(x - 16);
+                    break;
+
+                case RIGHT:
+                    direction = Direction.RIGHT;
+                    player.setX(x + 16);
+                    break;
+
+                case EXIT:
+                    this.exitGame();
+                    break;
+
+                default:
+                    direction = player.getDirection();
+            }
+
+            player.setDirection(direction);
+        }
+    }
 	
 }
