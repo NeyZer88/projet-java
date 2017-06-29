@@ -1,14 +1,10 @@
 package view;
 
-/**
- * 
- * @author Starz
- *
- */
+
 public interface IView {
 
 /**
- * method to display the nomber of diamonds
+ * method to display the number of diamonds
 	
  * @param message
  */
